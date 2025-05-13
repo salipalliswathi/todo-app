@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/739.5b6b928b.chunk.css","mappings":"AAAA,cACE,qBAAuB,CACvB,UAAY,CAEZ,YAAa,CACb,YAAa,CAFb,WAGF","sources":["components/css/UserProfile.css"],"sourcesContent":[".user-profile {\n  background-color: White;\n  color: black;\n  width: 200px;\n  height: 200px;\n  padding: 10px;\n}"],"names":[],"sourceRoot":""}

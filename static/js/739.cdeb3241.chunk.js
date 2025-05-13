@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_react_app=self.webpackChunkmy_react_app||[]).push([[739],{739:(e,s,a)=>{a.r(s),a.d(s,{default:()=>r});a(43);var i=a(579);const l=function(e){let{userDetails:s}=e;return(0,i.jsxs)("div",{className:"user-profile",children:[(0,i.jsx)("div",{children:s.name}),(0,i.jsx)("div",{children:s.lastName})]})};function r(){return(0,i.jsxs)("div",{children:["I M HOME",(0,i.jsx)(l,{userDetails:{name:"swathi",lastName:"salipalli"}})]})}}}]);
+//# sourceMappingURL=739.cdeb3241.chunk.js.map
