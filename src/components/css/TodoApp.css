@@ -1,0 +1,15 @@
+.todo__list {
+  list-style: none;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 0;
+  background: white;
+  text-align: left;
+  color: black;
+  margin-top: 20px;
+  width: 300px;
+}
+.stike {
+  text-decoration: line-through;
+  color: gray;
+}
