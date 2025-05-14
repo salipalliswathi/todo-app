@@ -1,15 +1,106 @@
+.todo-heading {
+  padding: 24px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  margin-bottom: 36px;
+}
+.todo-done {
+  font-weight: 800;
+}
+.todo-count {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 800;
+}
+.keep-it-up {
+  font-size: 10px;
+  text-align: left;
+}
+.task-input {
+  height: 44px;
+  border-radius: 8px;
+  width: 320px;
+  background: black;
+  color: white;
+}
+.add-task {
+  color: black;
+  background: darkorange;
+  padding: 12px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
 .todo__list {
   list-style: none;
   padding: 16px;
   border-radius: 8px;
   margin: 0;
-  background: white;
+  background: black;
   text-align: left;
-  color: black;
+  color: white;
   margin-top: 20px;
-  width: 300px;
+  width: 360px;
+}
+.task-item {
+  padding: 16px;
+  border: 1px solid gray;
+  color: gray;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 26px;
+}
+.task-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  column-gap: 10px;
 }
 .stike {
   text-decoration: line-through;
-  color: gray;
+}
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+/* When checked, make it green */
+.custom-checkbox input:checked + .checkmark {
+  background-color: green;
+  border-color: green;
+}
+.delete-all {
+  padding: 16px;
+  background-color: orange;
+  color: black;
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 8px;
 }

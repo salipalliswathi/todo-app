@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './router/AppRoutes';
+import AppRouter from './router/AppRouter';
+import 'font-awesome/css/font-awesome.min.css';
+import 'material-icons/iconfont/material-icons.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-      </header>
+      <AppRouter />
     </div>
   );
 }

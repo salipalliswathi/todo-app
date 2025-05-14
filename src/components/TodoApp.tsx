@@ -28,6 +28,10 @@ export default function TodoApp() {
   const clearAllTasks = (): void =>{
     setTaskList([])
   }
+  const deleteTask = (index: number): void => {
+    const updatedList = taskList.filter((_, i) => i !== index)
+    setTaskList(updatedList)
+  }
   useEffect(() => {
     const taskData = localStorage.getItem('task-list')
     console.log('Loaded from localStorage on mount:', taskData);
@@ -48,20 +52,48 @@ export default function TodoApp() {
   
   return (
     <div>
+      <div className='todo-heading '>
+        <div>
+        <div className='todo-done'>Todo Done</div> 
+        <div className='keep-it-up'> Keep It Up</div>
+        </div>
+        <div className='todo-count'>
+          {taskList.filter(item => item.isDone).length} / {taskList.length}
+        </div>
+      </div>
       <form onSubmit={addTaskToList}>
-        <input type="text" value={task} onChange={(e) => setTask(e.target.value)}></input>
-        <button type="submit">+ Add Task</button>
+        <input
+          type="text"
+          className="task-input"
+          placeholder='write your next task'
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+        >
+        </input>
+        <button type="submit" className="add-task">
+          + Add
+        </button>
       </form>
       <div className="todo__list">
-        Task List for Today {todayDate.toLocaleDateString()}
       {taskList.length ? taskList.map((item, index) => (
-        <div key={index}>
-          <input type="checkbox" checked={item.isDone} onChange={() => markItAsDone(index)}/>
-          <span className={item.isDone ? 'stike': ''}>{item.task}</span>
+        <div key={index} className="task-item">
+          <div className='task-text'>
+            <label className="custom-checkbox">
+              <input type="checkbox" checked={item.isDone} onChange={() => markItAsDone(index)}/>
+              <span className="checkmark"></span>
+            </label>
+            <span className={item.isDone ? 'stike': ''}>{item.task}</span>
+          </div>
+          <div>
+            {/* <i className="fa fa-edit" style={{ fontSize: '26px', color: 'gray'}}></i> */}
+            <span onClick={() => deleteTask(index)}>
+              <i className="material-icons" style={{ fontSize: '26px', color: 'gray'  }}>delete</i>
+            </span>
+          </div>
         </div>
       )): 'please add your tasks'}
       </div>
-      {taskList.length ? <button onClick={() => clearAllTasks()}>Clear All Tasks</button>: ''}
+      {taskList.length ? <button className="delete-all" onClick={() => clearAllTasks()}>Delete All Tasks</button>: ''}
     </div>
   )
 }

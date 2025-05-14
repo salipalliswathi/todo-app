@@ -1,0 +1,10 @@
+.todo-button {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  border-radius: 8px;
+}
+.link-reset {
+  text-decoration: none;
+  color: inherit;
+}
